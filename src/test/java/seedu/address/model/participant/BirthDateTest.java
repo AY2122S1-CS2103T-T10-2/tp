@@ -9,8 +9,6 @@ import java.time.Period;
 
 import org.junit.jupiter.api.Test;
 
-import seedu.address.model.particpant.BirthDate;
-
 public class BirthDateTest {
 
     @Test

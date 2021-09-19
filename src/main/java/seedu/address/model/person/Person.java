@@ -13,7 +13,7 @@ import seedu.address.model.tag.Tag;
  * Represents a Person in the address book.
  * Guarantees: details are present and not null, field values are validated, immutable.
  */
-public class Person {
+public class Person implements Comparable<Person> {
 
     // Identity fields
     private final Name name;
@@ -71,6 +71,21 @@ public class Person {
 
         return otherPerson != null
                 && otherPerson.getName().equals(getName());
+    }
+
+    /**
+     * Compares both persons by their names alphabetically.
+     *
+     * @param otherPerson The other {@code Person} object to compare to.
+     * @return 1 if the other person's name comes first alphabetically, -1 if it comes later and
+     * 0 if both persons have identical names.
+     */
+    @Override
+    public int compareTo(Person otherPerson) {
+        if (otherPerson == this) {
+            return 0;
+        }
+        return this.name.toString().compareTo(otherPerson.name.toString());
     }
 
     /**

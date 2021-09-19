@@ -76,6 +76,11 @@ public interface Model {
      */
     void setPerson(Person target, Person editedPerson);
 
+    /**
+     * Sorts the persons in the address book by their names in alphabetical order.
+     */
+    void sortPersons();
+
     /** Returns an unmodifiable view of the filtered person list */
     ObservableList<Person> getFilteredPersonList();
 

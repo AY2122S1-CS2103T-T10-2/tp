@@ -6,9 +6,9 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import seedu.address.model.particpant.BirthDate;
-import seedu.address.model.particpant.Note;
-import seedu.address.model.particpant.Participant;
+import seedu.address.model.participant.BirthDate;
+import seedu.address.model.participant.Note;
+import seedu.address.model.participant.Participant;
 import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;

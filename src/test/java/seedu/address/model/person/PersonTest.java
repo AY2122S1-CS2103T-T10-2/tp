@@ -1,7 +1,6 @@
 package seedu.address.model.person;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_ADDRESS_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_EMAIL_BOB;
 import static seedu.address.logic.commands.CommandTestUtil.VALID_NAME_BOB;
@@ -48,6 +47,22 @@ public class PersonTest {
         String nameWithTrailingSpaces = VALID_NAME_BOB + " ";
         editedBob = new PersonBuilder(BOB).withName(nameWithTrailingSpaces).build();
         assertFalse(BOB.isSamePerson(editedBob));
+    }
+
+    @Test
+    public void compareTo() {
+        // same values -> returns 0
+        Person aliceCopy = new PersonBuilder(ALICE).build();
+        assertEquals(ALICE.compareTo(aliceCopy), 0);
+
+        // same object -> returns 0
+        assertEquals(ALICE.compareTo(ALICE), 0);
+
+        // Alice comes before Bob alphabetically -> returns -1
+        assertEquals(ALICE.compareTo(BOB), -1);
+
+        // Bob comes after Alice alphabetically -> returns 1
+        assertEquals(BOB.compareTo(ALICE), 1);
     }
 
     @Test

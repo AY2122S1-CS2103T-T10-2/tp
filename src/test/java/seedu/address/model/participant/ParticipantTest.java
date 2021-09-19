@@ -14,8 +14,6 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
-import seedu.address.model.particpant.Note;
-import seedu.address.model.particpant.Participant;
 import seedu.address.model.person.Person;
 import seedu.address.testutil.ParticipantBuilder;
 
