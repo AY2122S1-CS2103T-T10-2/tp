@@ -282,8 +282,7 @@ Format: `deleteNok INDEX_1 INDEX_2`
 * `INDEX_2` refers to the index number of the Participant as shown in the displayed Participant list.
 * The index **must be a positive integer** 1, 2, 3, …​
 
-Example Usage:
-* `deleteNok 2 1` - Removes the 2nd Next-of-Kin from th1st Participant.
+* `deleteNok 2 1` - Removes the 2nd Next-of-Kin from the 1st Participant.
 
 <br>![result for 'deleteNok 1 2'](images/deleteNokSecondFirstResult.png)
 
@@ -512,12 +511,16 @@ Exits the program.
 
 Format: `exit`
 
-### Saving the data
+--------------------------------------------------------------------------------------------------------------------
+
+## Saving the data
 
 Managera saves data in the hard disk automatically after any command that changes the data. 
 There is no need to save manually.
 
-### Editing the data file
+--------------------------------------------------------------------------------------------------------------------
+
+## Editing the data file
 
 Managera's data is saved as a JSON file `[JAR file location]/data/addressbook.json`. Advanced users are welcome to 
 update data directly by editing that data file.
